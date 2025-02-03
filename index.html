@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.65">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="es"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Seguimiento Integral de Salud&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="styles.css"&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Menú Principal --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="menu" class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Menú Principal&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="showSection('diary')"&gt;Registro Diario&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="showSection('weekly')"&gt;Registro Semanal&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="showSection('progress')"&gt;Progreso General&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Registro Diario --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="diary" class="section hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Registro Diario&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Métricas de Sueño --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Métricas de Sueño&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="sleepForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="sleepDuration"&gt;Duración Total:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="sleepDuration" name="sleepDuration" placeholder="Horas"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="remPercentage"&gt;Fase REM (%):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="remPercentage" name="remPercentage"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="deepSleepPercentage"&gt;Sueño Profundo (%):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="deepSleepPercentage" name="deepSleepPercentage"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="lightSleepPercentage"&gt;Sueño Ligero (%):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="lightSleepPercentage" name="lightSleepPercentage"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="nap"&gt;Siesta (Sí/No):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="nap" name="nap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="No"&gt;No&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Sí"&gt;Sí&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="napDuration"&gt;Duración de la Siesta:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="napDuration" name="napDuration"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="sleepQuality"&gt;Calidad del Sueño:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="sleepQuality" name="sleepQuality"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Mala"&gt;Mala&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Regular"&gt;Regular&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Buena"&gt;Buena&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Excelente"&gt;Excelente&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="heartRate"&gt;Ritmo Cardíaco Medio (LPM):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="heartRate" name="heartRate"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="oxygenLevel"&gt;Oxígeno en Sangre Promedio (%):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="oxygenLevel" name="oxygenLevel"&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Estado de Ánimo --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Estado de Ánimo&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="moodForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="mood"&gt;Cómo te sientes hoy:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="mood" name="mood"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Feliz"&gt;Feliz&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Neutral"&gt;Neutral&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Triste"&gt;Triste&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Ansioso"&gt;Ansioso&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Nervioso"&gt;Nervioso&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="A Tope"&gt;A Tope&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Aburrido"&gt;Aburrido&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="moodNotes"&gt;Notas Opcionales:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;textarea id="moodNotes" name="moodNotes"&gt;&lt;/textarea&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Consumo de Tabaco/Cannabis --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Consumo de Tabaco y Cannabis&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="consumptionForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="cigarettes"&gt;Cigarrillos Consumidos:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="cigarettes" name="cigarettes"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="weed"&gt;Porros Consumidos:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="weed" name="weed"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="consumptionTime"&gt;Horarios de Consumo:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="consumptionTime" name="consumptionTime"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="consumptionNotes"&gt;Notas Adicionales:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;textarea id="consumptionNotes" name="consumptionNotes"&gt;&lt;/textarea&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Registro Alimentario --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Registro Alimentario&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="foodForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="add-button" onclick="addFoodSection()"&gt;+&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="foodSections"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Seguimiento Gastrointestinal --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Seguimiento Gastrointestinal&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="gastroForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" class="add-button" onclick="addBowelMovement()"&gt;+&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="bowelMovements"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Deporte --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Deporte&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="sportForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="sportType"&gt;Tipo de Actividad:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="sportType" name="sportType"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Running"&gt;Running&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Natación"&gt;Natación&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="runningFields" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="runningTime"&gt;Tiempo Total:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="runningTime" name="runningTime"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="runningDistance"&gt;Distancia Corrida (km):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="number" id="runningDistance" name="runningDistance"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="runningElevation"&gt;Desnivel Positivo/Negativo (metros):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="number" id="runningElevation" name="runningElevation"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="runningPace"&gt;Ritmo Medio (min/km):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="runningPace" name="runningPace"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="runningSensations"&gt;Escala de Sensaciones (1-10):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="number" id="runningSensations" name="runningSensations" min="1" max="10"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="runningPains"&gt;Posibles Dolores:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;textarea id="runningPains" name="runningPains"&gt;&lt;/textarea&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="swimmingFields" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="swimmingDistance"&gt;Distancia Total (metros):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="number" id="swimmingDistance" name="swimmingDistance"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="swimmingTime"&gt;Tiempo Total:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="swimmingTime" name="swimmingTime"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="swimmingStrokes"&gt;Número de Brazadas:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="number" id="swimmingStrokes" name="swimmingStrokes"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="swimmingPace"&gt;Ritmo Medio (segundos/100 metros):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="swimmingPace" name="swimmingPace"&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('sportType').addEventListener('change', function () {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const runningFields = document.getElementById('runningFields');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const swimmingFields = document.getElementById('swimmingFields');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (this.value === 'Running') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>runningFields.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>swimmingFields.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else if (this.value === 'Natación') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>swimmingFields.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>runningFields.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Botón Guardar --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="button" onclick="saveDiaryData()"&gt;Guardar&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="button" onclick="showSection('menu')"&gt;Volver&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Registro Semanal --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="weekly" class="section hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Registro Semanal&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="weeklyForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="weight"&gt;Peso (kg):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="weight" name="weight"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="fatPercentage"&gt;Grasa Corporal (%):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="fatPercentage" name="fatPercentage"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="musclePercentage"&gt;Músculo (%):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="musclePercentage" name="musclePercentage"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="boneMass"&gt;Masa Ósea (kg):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="boneMass" name="boneMass"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="visceralFat"&gt;Grasa Visceral (%):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="visceralFat" name="visceralFat"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="proteinPercentage"&gt;Proteínas (%):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="proteinPercentage" name="proteinPercentage"&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" onclick="saveWeeklyData()"&gt;Guardar&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" onclick="showSection('menu')"&gt;Volver&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Progreso General --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="progress" class="section hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Progreso General&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Tus datos se mostrarán aquí.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="button" onclick="showSection('menu')"&gt;Volver&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="script.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

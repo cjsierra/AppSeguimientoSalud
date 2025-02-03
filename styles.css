@@ -1,0 +1,123 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9e37b; /* Amarillo post-it */
+    color: #333;
+}
+
+.section {
+    padding: 20px;
+    margin: 10px;
+    background-color: #fffbe6; /* Amarillo claro para las secciones */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.02); /* Efecto hover ligero */
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2, h3 {
+    color: #0c4a6e; /* Azul petróleo para títulos */
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #0c4a6e; /* Azul petróleo para botones */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0a3d5e; /* Oscurecer al pasar el mouse */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0c4a6e; /* Azul petróleo para etiquetas */
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #0c4a6e; /* Resaltar campos al enfocar */
+    outline: none;
+}
+
+textarea {
+    height: 50px;
+    resize: vertical;
+}
+
+/* Botón "+" personalizado */
+button.add-button {
+    background-color: #ffba08; /* Naranja vibrante para botones "+" */
+    color: #333;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%; /* Redondear completamente */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button.add-button:hover {
+    background-color: #ffa600; /* Aclarar al pasar el mouse */
+}
+
+/* Separadores visuales */
+hr {
+    border: none;
+    border-top: 2px dashed #0c4a6e; /* Línea divisoria azul petróleo */
+    margin: 20px 0;
+}
+
+/* Encabezados de secciones */
+h2 {
+    margin-top: 20px;
+    border-bottom: 2px solid #0c4a6e; /* Línea bajo subtítulos */
+    padding-bottom: 5px;
+}
+
+/* Estilo para campos nuevos (comida y deposiciones) */
+.new-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fffbe6; /* Amarillo claro */
+    border: 1px solid #0c4a6e;
+    border-radius: 5px;
+}
